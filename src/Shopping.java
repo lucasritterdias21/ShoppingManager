@@ -62,45 +62,26 @@ public class Shopping {
 
             //qtdeLojasPorTipo
             public int quantidadeLojasPorTipo(String tipoLoja) {
-                int quantidadeCosmetico = 0;
-                int quantidadeVestuario = 0;
-                int quantidadeBijuteria = 0;
-                int quantidadeAlimentacao = 0;
-                int quantidadeInformatica = 0;
+                int quantidade = 0;
+               
                 for (Loja loja : lojas) {
                     if (loja instanceof Cosmetico && tipoLoja.equals("Cosmético")) {
-                        quantidadeCosmetico++;
+                        quantidade++;
                     } else if (loja instanceof Vestuario && tipoLoja.equals("Vestuário")) {
-                        quantidadeVestuario++;
+                        quantidade++;
                     } else if (loja instanceof Bijuteria && tipoLoja.equals("Bijuteria")) {
-                        quantidadeBijuteria++;
+                        quantidade++;
                     } else if (loja instanceof Alimentacao && tipoLoja.equals("Alimentação")) {
-                        quantidadeAlimentacao++;
+                        quantidade++;
                     } else if (loja instanceof Informatica && tipoLoja.equals("Informática")) {
-                        quantidadeInformatica++;
+                        quantidadea++;
                     }
-                }
-                                    
-                if (quantidade > 0) {
-                    return quantidade;
-                } else {
-                    return -1;
-                }
-            }
+                }                                    
 
-                     public int quantidadeLojasPorTipo(String tipoLoja) {
-                            int quantidade = 0;
-                                for (Loja loja : lojas) {
-                                    if (loja instanceof Cosmetico && tipoLoja.equals("Cosmético")) {
-                                        quantidadeCosmetico++;
-
-                            }
                     
-                if (quantidade > 0) {
+                
                     return quantidade;
-                } else {
-                    return -1;
-                }
+         
             }
 
              //lojaSeguroMaisCaro  
