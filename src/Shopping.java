@@ -62,22 +62,40 @@ public class Shopping {
 
             //qtdeLojasPorTipo
             public int quantidadeLojasPorTipo(String tipoLoja) {
-                int quantidade = 0;
-            
+                int quantidadeCosmetico = 0;
+                int quantidadeVestuario = 0;
+                int quantidadeBijuteria = 0;
+                int quantidadeAlimentacao = 0;
+                int quantidadeInformatica = 0;
                 for (Loja loja : lojas) {
                     if (loja instanceof Cosmetico && tipoLoja.equals("Cosmético")) {
-                        quantidade++;
+                        quantidadeCosmetico++;
                     } else if (loja instanceof Vestuario && tipoLoja.equals("Vestuário")) {
-                        quantidade++;
+                        quantidadeVestuario++;
                     } else if (loja instanceof Bijuteria && tipoLoja.equals("Bijuteria")) {
-                        quantidade++;
+                        quantidadeBijuteria++;
                     } else if (loja instanceof Alimentacao && tipoLoja.equals("Alimentação")) {
-                        quantidade++;
+                        quantidadeAlimentacao++;
                     } else if (loja instanceof Informatica && tipoLoja.equals("Informática")) {
-                        quantidade++;
+                        quantidadeInformatica++;
                     }
                 }
                                     
+                if (quantidade > 0) {
+                    return quantidade;
+                } else {
+                    return -1;
+                }
+            }
+
+                     public int quantidadeLojasPorTipo(String tipoLoja) {
+                            int quantidade = 0;
+                                for (Loja loja : lojas) {
+                                    if (loja instanceof Cosmetico && tipoLoja.equals("Cosmético")) {
+                                        quantidadeCosmetico++;
+
+                            }
+                    
                 if (quantidade > 0) {
                     return quantidade;
                 } else {
